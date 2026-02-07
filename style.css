@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Great Vibes', cursive;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  text-align: center;
+}
+
+/* ================= ROSE ================= */
+.rose {
+  font-size: 6rem;
+  cursor: pointer;
+  transition: transform 0.8s ease;
+}
+
+.rose:hover {
+  transform: scale(1.4) rotate(10deg);
+}
+
+/* ================= CARD ================= */
+.card {
+  margin-top: 30px;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+  pointer-events: none;
+}
+
+.card h1 {
+  font-size: 3rem;
+  color: #b3003b;
+}
+
+.card p {
+  font-size: 2rem;
+  color: #4a0015;
+  margin-top: 10px;
+}
+
+/* ================= ACTIVE ================= */
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
